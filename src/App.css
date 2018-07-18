@@ -1,5 +1,5 @@
 .App {
-  text-align: center;
+  text-align: left;
 }
 
 .App-logo {
@@ -21,6 +21,8 @@
 .App-intro {
   font-size: large;
 }
+
+.answer.selected { border-color: #3BA8AA; }
 
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }

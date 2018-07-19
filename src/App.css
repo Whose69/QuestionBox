@@ -1,5 +1,10 @@
-.App {
-  text-align: left;
+.app {
+  display: flex;
+  text-align: left -100px;
+  float: left;
+  min-height: 100px;
+  width: 5000px;
+  display: grid;
 }
 
 .App-logo {
@@ -22,9 +27,24 @@
   font-size: large;
 }
 
-.answer.selected { border-color: #3BA8AA; }
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.answer {
+  border: 5px solid #ccc;
+  float: left;
+  font: 700 24px HelveticaNeue, Helvetica, Arial;
+  margin: 10px 10px;
+  padding: 20px;
 }
+
+.question {
+  display: inline-block;
+}
+
+.question_header {
+  border-bottom: 3px solid red;
+}
+
+.buttons {
+
+}
+
+.selected { border-color: #3BA8AA; }

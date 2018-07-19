@@ -1,11 +1,16 @@
 import React from 'react';
 
 export class QuestionsDisplayer extends React.Component {
+
   render() {
-    return (<div>
-      <p className = "answertitle">{this.props.title}</p>
-    <p className = "outof">{this.props.index + "/" + this.props.arrayLength}</p>
-      </div>
+    return (
+    	<div>
+    		<div className="question header">
+      		<p className = "question title">{this.props.question.title}</p>
+    			<p className = "question outof">{this.props.questionIndex + 1 + "/" + this.props.questionsArrayLength}</p>
+    		</div>
+    		<p className = "question_body">{this.props.question.question}</p>
+        </div>
       );
   }
 };

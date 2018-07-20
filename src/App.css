@@ -1,50 +1,79 @@
 .app {
-  display: flex;
-  text-align: left -100px;
-  float: left;
-  min-height: 100px;
-  width: 5000px;
+  display: grid;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-top: -175px;
+  margin-left: -300px;
+  border: 2px solid #ccc;
+  height: 350px;
+  width: 600px;
   display: grid;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-}
-
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
-}
-
-.App-title {
-  font-size: 1.5em;
-}
-
-.App-intro {
-  font-size: large;
-}
-
-.answer {
-  border: 5px solid #ccc;
-  float: left;
-  font: 700 24px HelveticaNeue, Helvetica, Arial;
-  margin: 10px 10px;
-  padding: 20px;
+.question_header {
+  display: grid;
+  height: 18%;
+  grid-template-columns: 90% 10%;
+  text-align: start;
+  margin-top: auto;
 }
 
 .question {
-  display: inline-block;
+  vertical-align: middle;
 }
 
-.question_header {
-  border-bottom: 3px solid red;
+.title {
+  text-indent: 2%;
 }
 
-.buttons {
+.progress-bar {
+  height: 2px;
+  width: 100%;
+  background: darkgrey;
+}
 
+.progress-bar .progress {
+  height: 2px;
+  width: 0px;
+  background: darkblue;
+  transition: width 0.3s;
+}
+
+.answers_container {
+  display: flex;
+  margin: auto;
+}
+
+.answer {
+  border: 2px solid #ccc;
+  font: 450 15px HelveticaNeue, Helvetica, Arial;
+  height: 25px;
+  margin: 5px ;
+  padding: 10px 10px;
+  text-align: center;
+  vertical-align: middle;
 }
 
 .selected { border-color: #3BA8AA; }
+
+.navigation_buttons {
+  display: grid;
+  grid-template: 2fr 2fr 1fr / 8fr 2fr 2fr 1fr;
+  grid-column-gap: 2px;
+}
+
+.button {
+  font: bold 15px black;
+}
+
+.next {
+  grid-area: 2 / 3 / span 1 / span 1;
+}
+
+.back {
+  grid-area: 2 / 2 / span 1 / span 1;
+}
+
+
+

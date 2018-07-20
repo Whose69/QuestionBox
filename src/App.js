@@ -1,8 +1,8 @@
 import React from 'react';
 import './App.css';
 import {QuestionsDisplayer} from './components/QuestionsDisplayer.component';
-import {NavigationHandler} from './NavigationHandler.component';
-import {AnswersDisplayer} from './AnswersDisplayer.component';
+import {NavigationHandler} from './components/NavigationHandler.component';
+import {AnswersDisplayer} from './components/AnswersDisplayer.component';
 
 const questions = [{
     title: "Main js library",
@@ -28,7 +28,8 @@ export class App extends React.Component {
 
     this.state = { 
         currentQ: 0,
-        selectedAnswers: [null, null, null, null]
+        selectedAnswers: Array(questions.length).fill(null)
+
      };
 
     this.handleClickNext = this.handleClickNext.bind(this);
@@ -71,7 +72,7 @@ export class App extends React.Component {
                  onClickBack={this.handleClickBack}
                  onClickNext={this.handleClickNext}
                  disableBack={this.state.currentQ === 0}
-                 disableNext={this.state.currentQ + 1 === questions.length}
+                 disableNext={this.state.currentQ  === (questions.length - 1)}
           />
             </div>
         );

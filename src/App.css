@@ -13,10 +13,11 @@
 
 .question_header {
   display: grid;
-  height: 18%;
+  height: auto;
   grid-template-columns: 90% 10%;
   text-align: start;
-  margin-top: auto;
+  position: relative;
+  margin: 5px ;
 }
 
 .question {

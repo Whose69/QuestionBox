@@ -48,9 +48,10 @@
 .answer {
   border: 2px solid #ccc;
   font: 450 15px HelveticaNeue, Helvetica, Arial;
-  height: 25px;
+  height: auto;
   margin: 5px ;
   padding: 10px 10px;
+  position: relative;
   text-align: center;
   vertical-align: middle;
 }
